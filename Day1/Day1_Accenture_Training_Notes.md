@@ -5,6 +5,13 @@ Welcome to your study guide and reference documentation for **Day 1** of your SA
 
 ---
 
+## 📚 Topics Covered Today
+
+According to the **SAP S/4HANA Finance Daywise Plan**, Day 1 focuses on foundational overviews and organizational structures:
+* **SAP & S/4 HANA Overview**: SAP Fiori (Introduction), Business Process Overview (Procure-to-Pay), Financial Accounting Overview, SAP Navigation, and the Transport Management System.
+* **FI - Org Structure**: Core Organizational Structures in S/4HANA (Defining Company, Company Code, and Business Areas).
+
+---
 ## Table of Contents
 1. [Theoretical Foundations of ERP & SAP](#1-theoretical-foundations-of-erp--sap)
    - [What is an ERP?](#what-is-an-erp)
