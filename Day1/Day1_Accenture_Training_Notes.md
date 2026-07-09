@@ -5,13 +5,6 @@ Welcome to your study guide and reference documentation for **Day 1** of your SA
 
 ---
 
-## 📚 Topics Covered Today
-
-According to the **SAP S/4HANA Finance Daywise Plan**, Day 1 focuses on foundational overviews and organizational structures:
-* **SAP & S/4 HANA Overview**: SAP Fiori (Introduction), Business Process Overview (Procure-to-Pay), Financial Accounting Overview, SAP Navigation, and the Transport Management System.
-* **FI - Org Structure**: Core Organizational Structures in S/4HANA (Defining Company, Company Code, and Business Areas).
-
----
 ## Table of Contents
 1. [Theoretical Foundations of ERP & SAP](#1-theoretical-foundations-of-erp--sap)
    - [What is an ERP?](#what-is-an-erp)
@@ -34,6 +27,7 @@ According to the **SAP S/4HANA Finance Daywise Plan**, Day 1 focuses on foundati
    - [Customizing / Transport Requests (TR)](#customizing--transport-requests-tr)
    - [Configuration Walkthrough (Step-by-Step)](#configuration-walkthrough-step-by-step)
 7. [Screenshot Index & Links](#7-screenshot-index--links)
+8. [Topics Covered Today](#8-topics-covered-today)
 
 ---
 
@@ -275,3 +269,11 @@ Below is the directory list of all Day 1 screenshots for easy access:
 17. **[Screenshot 11:37:00](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day1/Screenshot%202026-07-08%20113700.png)**: Assign Company Code to Company node in SPRO.
 18. **[Screenshot 11:37:29](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day1/Screenshot%202026-07-08%20113729.png)**: Finding Company Code `MAK9` in assignment table.
 19. **[Screenshot 11:38:35](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day1/Screenshot%202026-07-08%20113835.png)**: Assigning Company `MAK9` to Company Code `MAK9` and saving.
+
+---
+
+## 8. Topics Covered Today
+
+According to the **SAP S/4HANA Finance Daywise Plan**, Day 1 focuses on foundational overviews and organizational structures:
+* **SAP & S/4 HANA Overview**: SAP Fiori (Introduction), Business Process Overview (Procure-to-Pay), Financial Accounting Overview, SAP Navigation, and the Transport Management System.
+* **FI - Org Structure**: Core Organizational Structures in S/4HANA (Defining Company, Company Code, and Business Areas).

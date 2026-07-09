@@ -5,12 +5,13 @@ Welcome to your study guide and reference documentation for **Day 2** of your SA
 
 ---
 
-## 📚 Topics Covered Today
-
-According to the **SAP S/4HANA Finance Daywise Plan**, Day 2 focuses on core structural and foundational settings:
-* **FI - Org Structure**: Ledger configuration, Parallel Accounting.
-* **FI - Basic Settings**: Fiscal year variants, Posting period variants, Field status, Tolerances, Document types, Number ranges, Posting keys.
-* **FI - Master Data**: General Ledger Master Record (Chart of Accounts, Account Groups).
+## Table of Contents
+1. [FI - Org Structure & Ledger Configuration](#1-fi---org-structure--ledger-configuration)
+2. [FI - Basic Settings](#2-fi---basic-settings)
+3. [FI - Master Data](#3-fi---master-data)
+4. [SAP Hands-On Customizing & Configuration Steps](#4-sap-hands-on-customizing--configuration-steps)
+5. [Screenshot Index & Links](#5-screenshot-index--links)
+6. [Topics Covered Today](#6-topics-covered-today)
 
 ---
 
@@ -23,10 +24,6 @@ A ledger is a central concept in Financial Accounting (FI). It represents a logi
 *   **Leading Ledger (`0L`)**: The primary ledger representing the main valuation and standard accounting principle for the entire organization.
 *   **Non-Leading Ledgers (`L1`/`N1`, `L2`/`N2`, etc.)**: Used for parallel accounting (e.g., local reporting standards vs group reporting standards).
 *   **Extension Ledgers (`E1`, `E2`, `E3`)**: Used to post management or reporting adjustments without duplicating the underlying data of the base ledger.
-
-**Configuration:**
-*   You can assign Company Codes to Ledgers (e.g., assigning Company Code `MAK9` to Leading Ledger `0L` with local currency type `10`).
-*   **Parallel Accounting**: Assign Accounting Principles to Ledger Groups in the IMG path.
 
 ---
 
@@ -52,7 +49,7 @@ SAP supports up to 4 special periods (typically periods 13 to 16) used for speci
 ### 2.3 Posting Periods
 Posting periods control the timeline within which transactions can be recorded.
 *   **In FI**: Generally, only **one period** is open (the current month) for security purposes to prevent back-dated or future-dated entries by unauthorized users.
-*   **In MM**: Generally, **two periods** are open (current and previous) to clear material transactions (e.g., materials received on the 31st but quality clearance happens on the 1st).
+*   **In MM**: Generally, **two periods** are open (current and previous) to clear material transactions.
 
 ### 2.4 Document Types & Number Ranges
 Document types classify the business transactions that take place.
@@ -113,19 +110,67 @@ An account group is a combination of accounts sharing the same nature.
 
 ---
 
-## 4. Screenshot Index & Configuration Paths
+## 4. SAP Hands-On Customizing & Configuration Steps
+
+### Configuration Walkthrough (Step-by-Step)
+
+#### Step 1: Assign Company Code to a Fiscal Year Variant
+*   **Menu Path**: `Financial Accounting Global Settings` > `Ledgers` > `Fiscal Year and Posting Periods` > `Assign Company Code to a Fiscal Year Variant`
+*   **Action**: Maps your specific company code to a fiscal year format (e.g., K4 or V3).
+
+#### Step 2: Define Variants for Open Posting Periods
+*   **Menu Path**: `Financial Accounting Global Settings` > `Ledgers` > `Fiscal Year and Posting Periods` > `Posting Periods` > `Define Variants for Open Posting Periods`
+*   **Action**: Creates a posting period variant that can be assigned to your company code.
+
+#### Step 3: Open and Close Posting Periods
+*   **Menu Path**: `Financial Accounting Global Settings` > `Ledgers` > `Fiscal Year and Posting Periods` > `Posting Periods` > `Open and Close Posting Periods`
+*   **Action**: Controls which periods are open for posting to prevent unauthorized entries.
+
+#### Step 4: Define Document Type (T-code `OBA7`)
+*   **Menu Path**: `Financial Accounting Global Settings` > `Document` > `Document type` > `Define Document Types`
+*   **Action**: Defines document types and their associated number ranges.
+
+#### Step 5: Edit Chart of Accounts List
+*   **Menu Path**: `General Ledger Accounting` > `Master Data` > `G/L Accounts` > `Preparations` > `Edit Chart of Accounts List`
+*   **Action**: Creates the chart of accounts structure.
+
+#### Step 6: Define Field Status Variants (T-code `OBC4`)
+*   **Menu Path**: `Financial Accounting` > `Financial Accounting Global Settings` > `Ledgers` > `Fields` > `Define Field Status Variants`
+*   **Action**: Copy standard variant 001 to your custom variant (e.g., 1515) and configure field behaviors (Required, Optional, Suppress) for groups like G001 (General data).
+
+#### Step 7: Define Tolerance Groups
+*   **Menu Path**: Found under FI Basic Settings.
+*   **Action**: Create new entries (e.g., for company code MAK9) specifying upper limits for posting procedures (amount per document, open item, cash discounts) for different employee levels.
+
+#### Step 8: Company Code Settings for the Ledger
+*   **Menu Path**: `Financial Accounting Global Settings` > `Ledgers` > `Ledger` > `Define Settings for Ledgers and Currency Types`
+*   **Action**: Configures settings for Ledger `0L` for your Company Code (e.g., `MAK9` with Local Curr. Type `10`).
+
+#### Step 9: Assign Accounting Principle to Ledger Groups
+*   **Menu Path**: `Financial Accounting Global Settings` > `Ledgers` > `Parallel Accounting` > `Assign Accounting Principle to Ledger Groups`
+*   **Action**: Maps accounting principles to specific ledger groups for parallel accounting purposes.
+
+---
+
+## 5. Screenshot Index & Links
 
 Below are references to the key configuration paths executed in SAP GUI, captured in today's screenshots:
 
-*   **Assign Company Code to a Fiscal Year Variant**: [095053.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20095053.png) 
-    *   *Path: Financial Accounting Global Settings > Ledgers > Fiscal Year and Posting Periods*
-*   **Define Variants for Open Posting Periods**: [095330.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20095330.png)
-*   **Open and Close Posting Periods**: [095603.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20095603.png)
-*   **Define Document Type (OBA7)**: [100522.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20100522.png)
-    *   *Path: Financial Accounting Global Settings > Document > Document type*
-*   **Edit Chart of Accounts List**: [104156.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20104156.png)
-    *   *Path: General Ledger Accounting > Master Data > G/L Accounts > Preparations*
-*   **Define Field Status Variants (OBC4)**: [105207.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20105207.png) / [104949.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20104949.png)
-*   **Define Tolerance Groups**: [121622.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20121622.png)
-*   **Company Code Settings for Ledger (0L)**: [122223.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20122223.png)
-*   **Assign Accounting Principle to Ledger Groups**: [122720.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20122720.png)
+1. **Assign Company Code to a Fiscal Year Variant**: [095053.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20095053.png) 
+2. **Define Variants for Open Posting Periods**: [095330.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20095330.png)
+3. **Open and Close Posting Periods**: [095603.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20095603.png)
+4. **Define Document Type (OBA7)**: [100522.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20100522.png)
+5. **Edit Chart of Accounts List**: [104156.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20104156.png)
+6. **Define Field Status Variants (OBC4)**: [105207.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20105207.png) / [104949.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20104949.png)
+7. **Define Tolerance Groups**: [121622.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20121622.png)
+8. **Company Code Settings for Ledger (0L)**: [122223.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20122223.png)
+9. **Assign Accounting Principle to Ledger Groups**: [122720.png](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Screenshot%202026-07-09%20122720.png)
+
+---
+
+## 6. Topics Covered Today
+
+According to the **SAP S/4HANA Finance Daywise Plan**, Day 2 focuses on core structural and foundational settings:
+* **FI - Org Structure**: Ledger configuration, Parallel Accounting.
+* **FI - Basic Settings**: Fiscal year variants, Posting period variants, Field status, Tolerances, Document types, Number ranges, Posting keys.
+* **FI - Master Data**: General Ledger Master Record (Chart of Accounts, Account Groups).
