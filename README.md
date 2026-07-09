@@ -18,6 +18,13 @@ The training materials are organized by day. Each folder contains the original t
     * Hands-on SAP configuration steps: defining Group Company, creating Company Code (`MAK9`), defining Business Areas (`MAKB`, `MAKH`, `MAKM`), and assigning Company Code to Company.
   * Contains 19 reference screenshots mapping to theoretical slides and SAP GUI customization steps.
 
+* **[Day2/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day2/Day2_Accenture_Training_Notes.md)**: Topics covered include:
+    * **FI - Org Structure**: Ledger configuration, Parallel Accounting.
+    * **FI - Basic Settings**: Fiscal year variants, Posting period variants, Field status, Tolerances, Document types, Number ranges, Posting keys.
+    * **FI - Master Data**: General Ledger Master Record (Chart of Accounts, Account Groups).
+  * Contains 24 reference screenshots mapping to theoretical slides and SAP GUI customization steps.
+
 ---
 
 ## 🚀 How to Use These Notes
