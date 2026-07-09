@@ -37,12 +37,14 @@ The training materials are organized by day. Each folder contains the original t
 
 ## 🔑 Common Transaction Codes (T-Codes) Reference
 
-Here are the critical T-codes configured during the initial phase:
+Here are the critical T-codes configured during the initial training phase:
 
-| Transaction Code | Description | Purpose |
-| :--- | :--- | :--- |
-| **`SPRO`** | SAP Project Reference Object | Access the Customizing Implementation Guide (IMG). |
-| **`OX15`** | Define Company | Create the group-level organizational entity. |
-| **`OX02`** | Define Company Code | Define legal entities for statutory reporting. |
-| **`OX03`** | Define Business Area | Set up segments for geographical/product-line reporting. |
-| **`OX16`** | Assign Company Code to Company | Bind the legal entity to the corporate parent group. |
+| Transaction Code | Description | Purpose | Importance / Usage |
+| :--- | :--- | :--- | :--- |
+| **`SPRO`** | SAP Project Reference Object | Access the Customizing Implementation Guide (IMG). | ⭐ **Highly Used** (Daily config) |
+| **`OX15`** | Define Company | Create the group-level organizational entity. | Foundational (One-time setup) |
+| **`OX02`** | Define Company Code | Define legal entities for statutory reporting. | Foundational (One-time setup) |
+| **`OX03`** | Define Business Area | Set up segments for geographical/product-line reporting. | Foundational (One-time setup) |
+| **`OX16`** | Assign Company Code to Company | Bind the legal entity to the corporate parent group. | Foundational (One-time setup) |
+| **`OBA7`** | Define Document Type | Defines document types and their associated number ranges. | ⭐ **Highly Important** (Core FI setup) |
+| **`OBC4`** | Define Field Status Variants | Configures field behaviors (Required/Optional/Suppress) for GL accounts. | ⭐ **Highly Important** (Core FI setup) |
