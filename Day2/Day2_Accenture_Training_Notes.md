@@ -170,7 +170,22 @@ Below are references to the key configuration paths executed in SAP GUI, capture
 
 ## 6. Topics Covered Today
 
-According to the **SAP S/4HANA Finance Daywise Plan**, Day 2 focuses on core structural and foundational settings:
-* **FI - Org Structure**: Ledger configuration, Parallel Accounting.
-* **FI - Basic Settings**: Fiscal year variants, Posting period variants, Field status, Tolerances, Document types, Number ranges, Posting keys.
-* **FI - Master Data**: General Ledger Master Record (Chart of Accounts, Account Groups).
+Below are general definitions for the topics scheduled in the **SAP S/4HANA Finance Daywise Plan** for Day 2. This serves as a quick conceptual reference:
+
+### FI - Org Structure
+* **Ledger Configuration**: The setup of the underlying accounting books in SAP. It includes the **Leading Ledger** (the main ledger for the entire enterprise) and **Non-Leading / Extension Ledgers** (used for adjustments or local reporting standards without duplicating data).
+* **Parallel Accounting**: A capability in SAP that allows companies to perform valuations and generate financial reports according to multiple accounting principles simultaneously (e.g., IFRS for the group, and local GAAP for the regional branch).
+
+### FI - Basic Settings
+* **Fiscal Year Variants**: Determines the financial calendar (accounting periods) for a company code. It defines whether the fiscal year matches the calendar year (Jan-Dec) or a non-calendar year (e.g., Apr-Mar), and allocates special periods for year-end adjustments.
+* **Posting Period Variants**: Controls which accounting periods are "open" (allowing users to post financial transactions) and which are "closed" (preventing postings). This acts as a primary internal control.
+* **Field Status**: Determines how a field behaves during a financial transaction posting. Fields can be set as **Required** (mandatory), **Optional**, or **Suppressed** (hidden) to ensure data entry accuracy.
+* **Tolerances**: Pre-defined limits set for employees or business partners (customers/vendors). It dictates the maximum amounts an employee can post or the maximum payment differences (like minor cash discounts) the system will automatically accept.
+* **Document Types**: A two-character key used to classify business transactions (e.g., `SA` for G/L postings, `KR` for vendor invoices). It dictates which account types can be posted to and links to specific number ranges.
+* **Number Ranges**: The sequential numbers assigned to financial documents when they are posted, providing a clear audit trail and easy identification of transaction types.
+* **Posting Keys**: A two-digit key that determines the line item's account type (G/L, Vendor, Customer, Asset, Material) and whether the entry is a Debit or a Credit.
+
+### FI - Master Data
+* **General Ledger Master Record**: 
+  * **Chart of Accounts**: The complete, structured master list of all General Ledger (G/L) accounts used by the organization to record financial transactions.
+  * **Account Groups**: A classification system within the Chart of Accounts that groups similar accounts together (e.g., Liquid Assets, Fixed Assets). It controls the number range and field status for the creation of those specific G/L master records.

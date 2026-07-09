@@ -274,6 +274,17 @@ Below is the directory list of all Day 1 screenshots for easy access:
 
 ## 8. Topics Covered Today
 
-According to the **SAP S/4HANA Finance Daywise Plan**, Day 1 focuses on foundational overviews and organizational structures:
-* **SAP & S/4 HANA Overview**: SAP Fiori (Introduction), Business Process Overview (Procure-to-Pay), Financial Accounting Overview, SAP Navigation, and the Transport Management System.
-* **FI - Org Structure**: Core Organizational Structures in S/4HANA (Defining Company, Company Code, and Business Areas).
+Below are general definitions for the topics scheduled in the **SAP S/4HANA Finance Daywise Plan** for Day 1. This serves as a quick conceptual reference:
+
+### SAP & S/4 HANA Overview
+* **SAP Fiori**: The new, modern user experience (UX) for SAP software. It provides a role-based, consumer-grade experience across all lines of business, tasks, and devices, offering a massive leap forward in usability compared to the classic SAP GUI.
+* **Business Process Overview (Procure-to-Pay)**: The end-to-end business process that covers everything from identifying a need for a product/service, requisitioning it, approving the budget, selecting a vendor, issuing a purchase order, receiving the goods, and finally paying the invoice.
+* **Financial Accounting Overview**: The core module in SAP (SAP FI) responsible for tracking financial data and generating external statutory reports like the Balance Sheet and Profit & Loss statement for external stakeholders (banks, tax authorities, shareholders).
+* **SAP Navigation**: The fundamental skills required to move around the SAP system, including understanding the SAP menu, favorites, command field (for entering transaction codes like `SPRO`), and standard toolbar icons.
+* **Transport Management System (TMS)**: The system used by SAP to manage and move configuration changes and custom code from the Development environment to Quality Assurance, and finally into the Production system using Transport Requests (TRs).
+
+### FI - Org Structure
+* **Core Organizational Structures in S/4HANA**:
+  * **Company**: The highest organizational unit representing the entire corporate group (e.g., Tata Group) used primarily for consolidated financial statements.
+  * **Company Code**: An independent legal entity within the company that maintains its own set of books (Balance Sheet & P&L) for legal reporting (e.g., Tata Motors).
+  * **Business Area**: A cross-company code organizational unit corresponding to a specific geographic area or product line, used for internal reporting and segment performance analysis.
