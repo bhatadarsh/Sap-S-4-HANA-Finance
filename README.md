@@ -25,6 +25,14 @@ The training materials are organized by day. Each folder contains the original t
     * **FI - Master Data**: General Ledger Master Record (Chart of Accounts, Account Groups).
   * Contains 24 reference screenshots mapping to theoretical slides and SAP GUI customization steps.
 
+* **[Day3(Assignments)/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day3%28Assignments%29/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day3%28Assignments%29/Day3_Accenture_Training_Notes.md)**: A complete, step-by-step walkthrough of the Day 3 assignment exercises, covering:
+    * **SAP System Login**: General prerequisites and navigation.
+    * **Assignment 1**: Define and Assign Organization Structure (Company, Company Codes, Business Areas).
+    * **Assignment 2**: Ledger Settings (Defining ledgers and assigning company codes).
+    * **Assignment 3**: Currency Configuration (Exchange rate types, translation ratios, maintaining exchange rates).
+  * Contains 3 PDF assignment exercise sheets.
+
 ---
 
 ## 🚀 How to Use These Notes
@@ -48,3 +56,4 @@ Here are the critical T-codes configured during the initial training phase:
 | **`OX16`** | Assign Company Code to Company | Bind the legal entity to the corporate parent group. | Foundational (One-time setup) |
 | **`OBA7`** | Define Document Type | Defines document types and their associated number ranges. | ⭐ **Highly Important** (Core FI setup) |
 | **`OBC4`** | Define Field Status Variants | Configures field behaviors (Required/Optional/Suppress) for GL accounts. | ⭐ **Highly Important** (Core FI setup) |
+| **`OB08`** | Maintain Exchange Rates | Direct entry screen to maintain daily currency exchange rates. | ⭐ **Highly Important** (Daily operation) |
