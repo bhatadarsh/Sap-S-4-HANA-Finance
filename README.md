@@ -25,12 +25,19 @@ The training materials are organized by day. Each folder contains the original t
     * **FI - Master Data**: General Ledger Master Record (Chart of Accounts, Account Groups).
   * Contains 24 reference screenshots mapping to theoretical slides and SAP GUI customization steps.
 
-* **[Day3(Assignments)/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day3%28Assignments%29/)**
-  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Day3%28Assignments%29/Day3_Accenture_Training_Notes.md)**: A complete, step-by-step walkthrough of the Day 3 assignment exercises, covering:
+* **[Unit2_Organizational Structure(Assignments)/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Unit2_Organizational%20Structure%28Assignments%29/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Unit2_Organizational%20Structure%28Assignments%29/Day3_Accenture_Training_Notes.md)**: A complete, step-by-step walkthrough of the Unit 2 assignment exercises, covering:
     * **SAP System Login**: General prerequisites and navigation.
     * **Assignment 1**: Define and Assign Organization Structure (Company, Company Codes, Business Areas).
     * **Assignment 2**: Ledger Settings (Defining ledgers and assigning company codes).
     * **Assignment 3**: Currency Configuration (Exchange rate types, translation ratios, maintaining exchange rates).
+  * Contains 3 PDF assignment exercise sheets.
+
+* **[Unit 03_Finance Basic Settings/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Unit%2003_Finance%20Basic%20Settings/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Unit%2003_Finance%20Basic%20Settings/Unit3_Accenture_Training_Notes.md)**: Walkthrough for Unit 3 assignments and concepts:
+    * **Assignment 1**: Maintain Fiscal Year Variant and Posting Period Variant.
+    * **Assignment 2**: Maintain Basic Settings (Document Type, Number Ranges, Field Status Variant, Tolerance Group).
+    * **Assignment 3**: Create Tax Code for output & input tax type.
   * Contains 3 PDF assignment exercise sheets.
 
 ---
