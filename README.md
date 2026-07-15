@@ -40,6 +40,16 @@ The training materials are organized by day. Each folder contains the original t
     * **Assignment 3**: Create Tax Code for output & input tax type.
   * Contains 3 PDF assignment exercise sheets.
 
+* **[Unit4_GL Master Data/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Unit4_GL%20Master%20Data/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Unit4_GL%20Master%20Data/Unit4_Accenture_Training_Notes.md)**: Walkthrough for Unit 4 assignments and concepts:
+    * **Assignment 1**: GL Master Data Configuration (Chart of Accounts, Account Groups, GL Accounts, Profit Centers).
+  * Contains 1 PDF assignment exercise sheet.
+
+* **[Unit5_DocumentSplitting/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Unit5_DocumentSplitting/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/Unit5_DocumentSplitting/Unit5_Accenture_Training_Notes.md)**: Walkthrough for Unit 5 assignments and concepts:
+    * **Assignment 1**: Document Splitting & Posting (Vendor invoices, GL balancing, Document Change Rules).
+  * Contains 1 PDF assignment exercise sheet.
+
 ---
 
 ## 🚀 How to Use These Notes
@@ -64,3 +74,9 @@ Here are the critical T-codes configured during the initial training phase:
 | **`OBA7`** | Define Document Type | Defines document types and their associated number ranges. | ⭐ **Highly Important** (Core FI setup) |
 | **`OBC4`** | Define Field Status Variants | Configures field behaviors (Required/Optional/Suppress) for GL accounts. | ⭐ **Highly Important** (Core FI setup) |
 | **`OB08`** | Maintain Exchange Rates | Direct entry screen to maintain daily currency exchange rates. | ⭐ **Highly Important** (Daily operation) |
+| **`FS00`** | Create G/L Account Centrally | Create, change, or display General Ledger master records. | ⭐ **Highly Important** (Master Data) |
+| **`FB01`** | Post Document | Post standard financial documents (GL, Vendor, Customer). | ⭐ **Highly Used** (Daily operation) |
+| **`FB02`** | Change Document | Modify changeable fields (like Document Date) in a posted document. | Standard Operation |
+| **`FB03`** | Display Document | View posted documents (Entry View vs. General Ledger View). | ⭐ **Highly Used** (Audit/Review) |
+| **`KE51`** | Create Profit Center | Create new Profit Center master data. | Foundational (Master Data) |
+| **`SE16N`** | General Table Display | Query database tables directly (e.g., viewing `BKPF` for document headers). | ⭐ **Highly Important** (Technical/Debug) |
