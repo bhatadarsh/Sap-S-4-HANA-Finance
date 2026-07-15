@@ -50,6 +50,14 @@ The training materials are organized by day. Each folder contains the original t
     * **Assignment 1**: Document Splitting & Posting (Vendor invoices, GL balancing, Document Change Rules).
   * Contains 1 PDF assignment exercise sheet.
 
+* **[15-07-2026 (Live Session)/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/15-07-2026/)**
+  * **[Live Session Study Notes](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/15-07-2026/15-07-2026_Live_Session_Notes.md)**: A synthesis of 43 live classroom screenshots, detailing:
+    * **Tax Configuration**: Assigning Tax Calculation Procedure (TAXINN).
+    * **Retained Earnings**: Defining P&L account types and mapping the retained earnings account.
+    * **Document Splitting**: Classifying GL accounts to item categories and configuring the Zero-Balance Clearing Account.
+    * **Master Data**: Central creation of GL accounts via `FS00`.
+  * Contains 43 reference screenshots.
+
 ---
 
 ## 🚀 How to Use These Notes
