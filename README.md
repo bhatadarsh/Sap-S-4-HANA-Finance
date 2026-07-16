@@ -58,6 +58,12 @@ The training materials are organized by day. Each folder contains the original t
     * **Master Data**: Central creation of GL accounts via `FS00`.
   * Contains 43 reference screenshots.
 
+* **[16-07-2026 (Live Session)/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/16-07-2026/)**
+  * **[Live Session Study Notes](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/16-07-2026/16-07-2026_Live_Session_Notes.md)**: A synthesis of 34 live classroom screenshots, detailing:
+    * **Maker-Checker Workflow**: Parking a document, notifying a superior via SAP Mail (`SO00`), and posting the parked document (`FBV0`).
+    * **Number Ranges**: Maintaining intervals for accounting documents (Object RF_BELEG).
+  * Contains 34 reference screenshots.
+
 * **[unit6-Business Transactions Processing/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/unit6-Business%20Transactions%20Processing/)**
   * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/unit6-Business%20Transactions%20Processing/Unit6_Accenture_Training_Notes.md)**: Walkthrough for Unit 6 assignments and concepts:
     * **Assignment 1**: GL Business Transactions (Regular, Park, Hold, Reference, Recurring, Reversals, and Clearing).
@@ -98,3 +104,6 @@ Here are the critical T-codes configured during the initial training phase:
 | **`FBD1`** | Enter Recurring Entry | Create a template for automated recurring postings. | Foundational (Periodic Processing) |
 | **`FB08`** | Reverse Document | Reverse a previously posted financial document. | ⭐ **Highly Important** (Corrections) |
 | **`F-04`** | Post with Clearing | Manually clear open items against incoming/outgoing payments. | ⭐ **Highly Used** (Daily operation) |
+| **`SO00`** | SAP Business Workplace | Internal SAP mail/inbox for sending messages and workflows. | ⭐ **Highly Used** (Communications) |
+| **`FBV0`** | Post Parked Document | Review and post a document that was previously parked. | ⭐ **Highly Important** (Maker-Checker) |
+| **`FBN1`** | Accounting Document Number Ranges | Define number range intervals for document types (Object RF_BELEG). | Foundational (Core Setup) |
