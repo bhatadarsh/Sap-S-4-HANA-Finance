@@ -58,6 +58,11 @@ The training materials are organized by day. Each folder contains the original t
     * **Master Data**: Central creation of GL accounts via `FS00`.
   * Contains 43 reference screenshots.
 
+* **[unit6-Business Transactions Processing/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/unit6-Business%20Transactions%20Processing/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/unit6-Business%20Transactions%20Processing/Unit6_Accenture_Training_Notes.md)**: Walkthrough for Unit 6 assignments and concepts:
+    * **Assignment 1**: GL Business Transactions (Regular, Park, Hold, Reference, Recurring, Reversals, and Clearing).
+  * Contains 1 PDF assignment exercise sheet.
+
 ---
 
 ## 🚀 How to Use These Notes
@@ -88,3 +93,8 @@ Here are the critical T-codes configured during the initial training phase:
 | **`FB03`** | Display Document | View posted documents (Entry View vs. General Ledger View). | ⭐ **Highly Used** (Audit/Review) |
 | **`KE51`** | Create Profit Center | Create new Profit Center master data. | Foundational (Master Data) |
 | **`SE16N`** | General Table Display | Query database tables directly (e.g., viewing `BKPF` for document headers). | ⭐ **Highly Important** (Technical/Debug) |
+| **`FB50`** | Enter G/L Account Document | Single-screen transaction to post GL documents. | ⭐ **Highly Used** (Daily operation) |
+| **`FV50`** | Park G/L Account Document | Save an incomplete GL document without updating balances. | ⭐ **Highly Used** (Daily operation) |
+| **`FBD1`** | Enter Recurring Entry | Create a template for automated recurring postings. | Foundational (Periodic Processing) |
+| **`FB08`** | Reverse Document | Reverse a previously posted financial document. | ⭐ **Highly Important** (Corrections) |
+| **`F-04`** | Post with Clearing | Manually clear open items against incoming/outgoing payments. | ⭐ **Highly Used** (Daily operation) |
