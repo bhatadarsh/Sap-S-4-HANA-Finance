@@ -64,6 +64,13 @@ The training materials are organized by day. Each folder contains the original t
     * **Number Ranges**: Maintaining intervals for accounting documents (Object RF_BELEG).
   * Contains 34 reference screenshots.
 
+* **[17-07-2026 (Live Session)/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/17-07-2026/)**
+  * **[Live Session Study Notes](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/17-07-2026/17-07-2026_Live_Session_Notes.md)**: A synthesis of 83 live classroom screenshots, detailing:
+    * **Recurring Documents Workflow**: Creating templates (`FBD1`), listing (`F.15`), and executing batch runs (`F.14`).
+    * **Open Item Management**: Using G/L Line Item Display (`FBL3N`) and understanding SAP status icons (Open vs. Cleared).
+    * **Payments**: Differences between Standard, Partial, and Residual payments.
+  * Contains 83 reference screenshots.
+
 * **[unit6-Business Transactions Processing/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/unit6-Business%20Transactions%20Processing/)**
   * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/unit6-Business%20Transactions%20Processing/Unit6_Accenture_Training_Notes.md)**: Walkthrough for Unit 6 assignments and concepts:
     * **Assignment 1**: GL Business Transactions (Regular, Park, Hold, Reference, Recurring, Reversals, and Clearing).
@@ -107,3 +114,6 @@ Here are the critical T-codes configured during the initial training phase:
 | **`SO00`** | SAP Business Workplace | Internal SAP mail/inbox for sending messages and workflows. | ⭐ **Highly Used** (Communications) |
 | **`FBV0`** | Post Parked Document | Review and post a document that was previously parked. | ⭐ **Highly Important** (Maker-Checker) |
 | **`FBN1`** | Accounting Document Number Ranges | Define number range intervals for document types (Object RF_BELEG). | Foundational (Core Setup) |
+| **`F.15`** | List Recurring Documents | Display a list of all active recurring document templates. | Foundational (Periodic Processing) |
+| **`F.14`** | Execute Recurring Documents | Batch run to generate and post documents from recurring templates. | ⭐ **Highly Used** (Periodic Processing) |
+| **`FBL3N`** | G/L Account Line Item Display | View open, cleared, and all items for a specific GL account. | ⭐ **Highly Important** (Daily operation/Audit) |
