@@ -22,7 +22,7 @@ The session heavily focused on viewing and managing open items, specifically usi
 *   **T-Code `FBL3N` (G/L Account Line Item Display)**: The screenshots show the selection screen where the user can filter by **Open items** (not yet paid), **Cleared items** (paid), or **All items**.
 *   **Visual Status Indicators**: The session highlighted the importance of the status icons in SAP:
     *   🔴 **Red Circle**: Open Item (Not yet cleared/paid).
-    *   🟢 **Green Circle/Square**: Cleared Item (Matched/Paid).
+    *   🟩 **Green Square**: Cleared Item (Matched/Paid).
     *   🔻 **Red Down Arrow**: Overdue Open Item.
     *   ⚠️ **Yellow Triangle**: Parked Item.
 
