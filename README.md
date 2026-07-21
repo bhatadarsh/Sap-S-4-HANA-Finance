@@ -4,6 +4,12 @@ This repository contains study guides, hands-on configuration walkthroughs, fund
 
 ---
 
+## 🌟 Master Implementation Guide
+Looking for a single, step-by-step project that covers everything from Unit 2 through Unit 9? 
+👉 **[Click here for the End-to-End S/4HANA Implementation Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/end-to-end.md)**
+
+---
+
 ## 📂 Repository Structure
 
 The training materials are organized by day. Each folder contains the original training screenshots along with structured study notes.
