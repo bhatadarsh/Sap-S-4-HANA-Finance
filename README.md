@@ -76,6 +76,21 @@ The training materials are organized by day. Each folder contains the original t
     * **Assignment 1**: GL Business Transactions (Regular, Park, Hold, Reference, Recurring, Reversals, and Clearing).
   * Contains 1 PDF assignment exercise sheet.
 
+* **[SAP S4 Hana Finance_U7_AP and AR Overview_Payment Terms/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U7_AP%20and%20AR%20Overview_Payment%20Terms/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U7_AP%20and%20AR%20Overview_Payment%20Terms/Unit7_Accenture_Training_Notes.md)**: Walkthrough for Unit 7:
+    * **Assignment 1**: Creating Payment Terms (`OBB8`) and assigning them to master data.
+  * Contains 1 PDF assignment exercise sheet.
+
+* **[SAP S4 Hana Finance_U8_Business Partner Master/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U8_Business%20Partner%20Master/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U8_Business%20Partner%20Master/Unit8_Accenture_Training_Notes.md)**: Walkthrough for Unit 8:
+    * **Assignment 1**: Creating a central Business Partner and extending it to FI Customer (`FLCU00`) and FI Vendor (`FLVN00`) roles.
+  * Contains 1 PDF assignment exercise sheet.
+
+* **[SAP S4 Hana Finance_U9_Special GL and Regular Transaction/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U9_Special%20GL%20and%20Regular%20Transaction/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U9_Special%20GL%20and%20Regular%20Transaction/Unit9_Accenture_Training_Notes.md)**: Walkthrough for Unit 9:
+    * **Assignment 1**: Posting regular invoices (`FB70`/`FB60`), processing Customer Down Payments (`FBA2`), and clearing them (`F-39`).
+  * Contains 1 PDF assignment exercise sheet.
+
 ---
 
 ## 🚀 How to Use These Notes
@@ -117,3 +132,9 @@ Here are the critical T-codes configured during the initial training phase:
 | **`F.15`** | List Recurring Documents | Display a list of all active recurring document templates. | Foundational (Periodic Processing) |
 | **`F.14`** | Execute Recurring Documents | Batch run to generate and post documents from recurring templates. | ⭐ **Highly Used** (Periodic Processing) |
 | **`FBL3N`** | G/L Account Line Item Display | View open, cleared, and all items for a specific GL account. | ⭐ **Highly Important** (Daily operation/Audit) |
+| **`OBB8`** | Maintain Terms of Payment | Create and configure custom payment terms and cash discount rules. | Foundational (Core Setup) |
+| **`BP`** | Maintain Business Partner | Central transaction to create and manage Customers/Vendors in S/4HANA. | ⭐ **Highly Important** (Master Data) |
+| **`FBA2`** / **`F-29`** | Post Customer Down Payment | Post an advance payment to a Special GL indicator. | Standard Operation |
+| **`F-22`** / **`FB70`** | Enter Customer Invoice | Post standard Accounts Receivable invoices. | ⭐ **Highly Used** (Daily operation) |
+| **`FB60`** | Enter Vendor Invoice | Post standard Accounts Payable invoices. | ⭐ **Highly Used** (Daily operation) |
+| **`F-39`** | Clear Customer Down Payment | Clear an open down payment against a posted invoice. | Standard Operation |
