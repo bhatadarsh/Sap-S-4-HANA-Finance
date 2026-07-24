@@ -256,27 +256,4 @@ Instead of paying 500 vendors manually one-by-one (`F-53`), SAP's Automatic Paym
     4. Click **Payment Run** to execute and pay the vendor!
 
 ---
-
-## Phase 7: FI-MM Integration (Procure-to-Pay)
-
-### Live Session Concept (24-07-2026):
-**Explanation for Beginners**:
-When the warehouse team receives goods (`MIGO`), they don't know anything about accounting or G/L accounts. SAP bridges Materials Management (MM) and Financial Accounting (FI) automatically. The system looks at what is happening (Transaction Key) and what material it is (Valuation Class) to automatically find the correct G/L account.
-
-### The Automatic Account Determination Configuration:
-*   **Path**: `SPRO > SAP Reference IMG > Materials Management > Valuation and Account Assignment > Account Determination > Account Determination Without Wizard > Configure Automatic Postings`
-*   **T-Code**: `OBYC`
-*   **Action**: The FI consultant links specific Transaction Keys to G/L Accounts.
-    *   **BSX (Inventory Posting)**: Mapped to the Inventory Asset G/L.
-    *   **WRX (GR/IR Clearing)**: Mapped to the temporary Goods Receipt/Invoice Receipt liability G/L.
-    *   **GBB (Consumption/Offset)**: Mapped to Expense G/Ls (like Raw Material Consumption).
-
-### The Procure-to-Pay Flow (End User Actions):
-1.  **Purchase Order (`ME21N`)**: Purchasing creates a PO. (No accounting entry).
-2.  **Goods Receipt (`MIGO`)**: Warehouse receives the goods. 
-    *   *Automatic Accounting Entry*: Debit Inventory (`BSX`), Credit GR/IR Clearing (`WRX`).
-3.  **Invoice Verification (`MIRO`)**: Accounts Payable receives the bill.
-    *   *Automatic Accounting Entry*: Debit GR/IR Clearing (`WRX`), Credit Vendor.
-
----
-**Congratulations!** By following these steps sequentially, you have learned exactly how a global enterprise structures its backend, protects its data, builds its masters, processes daily cashflow, pays vendors in bulk, and integrates with the logistics modules in SAP S/4HANA.
+**Congratulations!** By following these steps sequentially, you have learned exactly how a global enterprise structures its backend, protects its data, builds its masters, processes daily cashflow, and pays vendors in bulk in SAP S/4HANA.
