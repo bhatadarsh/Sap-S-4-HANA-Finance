@@ -218,4 +218,65 @@ The system is fully built! Now we act as the end-user (the accountant) to proces
 *   **Action**: The customer owes us $10,000, but we already have their $5,000. We use `F-39` to match them together. Enter Customer `BP9001` and the Invoice Document Number. Select the $5,000 down payment. Save. The system nets the balances, leaving exactly $5,000 open for the customer to pay later.
 
 ---
-**Congratulations!** By following these steps sequentially, you have learned exactly how a global enterprise structures its backend, protects its data, builds its masters, and processes its daily cashflow in SAP S/4HANA.
+
+## Phase 6: Automatic Payment Program (Unit 10 Assignment)
+
+### Assignment Prompt:
+> *"Maintain the configuration for one payment method. Define house bank and bank accounts. Maintain ranking order configuration. Execute Automatic Payment program. Execute manual payment transaction."*
+
+**Explanation for Beginners**:
+Instead of paying 500 vendors manually one-by-one (`F-53`), SAP's Automatic Payment Program (APP) can pay all 500 at once. To do this, we must configure our physical bank (House Bank) in SAP and set up the rules for how we pay (e.g., Check or Transfer).
+
+### Step-by-Step Configuration:
+
+**1. Define House Bank and Bank Accounts**
+*   **Path**: `SPRO > SAP Reference IMG > Financial Accounting > Bank Accounting > Bank Accounts > Define House Banks`
+*   **T-Code**: `FI12`
+*   **Action**: 
+    1. Select Company Code `MAK1`.
+    2. Create House Bank ID `CITI`. Enter Bank Key (Routing Number).
+    3. Double click **Bank Accounts**. Create Account ID `OPR1`. Link it to the G/L Account you created for this bank.
+
+**2. Configure Automatic Payment Program (APP)**
+*   **Path**: `SPRO > SAP Reference IMG > Financial Accounting > Accounts Receivable and Accounts Payable > Business Transactions > Outgoing Payments > Automatic Outgoing Payments > Payment Method/Bank Selection > Set Up Payment Methods per Country for Payment Transactions`
+*   **T-Code**: `FBZP`
+*   **Action**: 
+    1. Click **Payment Methods in Country**: Create Method `C` (Check) for Country `US`.
+    2. Click **Bank Determination**: Select Company Code `MAK1`. 
+       *   Under **Ranking Order**, rank your House Bank `CITI` as `1` for Method `C`.
+       *   Under **Bank Accounts**, link House Bank `CITI`, Method `C`, Account ID `OPR1`, and the Bank Subaccount G/L.
+
+**3. Execute the Payment Run**
+*   **Path**: `SAP Easy Access > Accounting > Financial Accounting > Accounts Payable > Periodic Processing > F110 - Payments`
+*   **T-Code**: `F110`
+*   **Action**: 
+    1. Enter a **Run Date** (today) and an **Identification** (e.g., `MAK1A`).
+    2. Go to **Parameters**: Enter Company Code `MAK1`, Payment Method `C`, Next Posting Date, and the Vendor ID (`BP9001`).
+    3. Go to **Proposal**: Run a simulation to ensure invoices are picked up.
+    4. Click **Payment Run** to execute and pay the vendor!
+
+---
+
+## Phase 7: FI-MM Integration (Procure-to-Pay)
+
+### Live Session Concept (24-07-2026):
+**Explanation for Beginners**:
+When the warehouse team receives goods (`MIGO`), they don't know anything about accounting or G/L accounts. SAP bridges Materials Management (MM) and Financial Accounting (FI) automatically. The system looks at what is happening (Transaction Key) and what material it is (Valuation Class) to automatically find the correct G/L account.
+
+### The Automatic Account Determination Configuration:
+*   **Path**: `SPRO > SAP Reference IMG > Materials Management > Valuation and Account Assignment > Account Determination > Account Determination Without Wizard > Configure Automatic Postings`
+*   **T-Code**: `OBYC`
+*   **Action**: The FI consultant links specific Transaction Keys to G/L Accounts.
+    *   **BSX (Inventory Posting)**: Mapped to the Inventory Asset G/L.
+    *   **WRX (GR/IR Clearing)**: Mapped to the temporary Goods Receipt/Invoice Receipt liability G/L.
+    *   **GBB (Consumption/Offset)**: Mapped to Expense G/Ls (like Raw Material Consumption).
+
+### The Procure-to-Pay Flow (End User Actions):
+1.  **Purchase Order (`ME21N`)**: Purchasing creates a PO. (No accounting entry).
+2.  **Goods Receipt (`MIGO`)**: Warehouse receives the goods. 
+    *   *Automatic Accounting Entry*: Debit Inventory (`BSX`), Credit GR/IR Clearing (`WRX`).
+3.  **Invoice Verification (`MIRO`)**: Accounts Payable receives the bill.
+    *   *Automatic Accounting Entry*: Debit GR/IR Clearing (`WRX`), Credit Vendor.
+
+---
+**Congratulations!** By following these steps sequentially, you have learned exactly how a global enterprise structures its backend, protects its data, builds its masters, processes daily cashflow, pays vendors in bulk, and integrates with the logistics modules in SAP S/4HANA.

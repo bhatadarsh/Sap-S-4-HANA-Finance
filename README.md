@@ -97,6 +97,18 @@ The training materials are organized by day. Each folder contains the original t
     * **Assignment 1**: Posting regular invoices (`FB70`/`FB60`), processing Customer Down Payments (`FBA2`), and clearing them (`F-39`).
   * Contains 1 PDF assignment exercise sheet.
 
+* **[SAP S4 Hana Finance_U10_Automatic Payment Program/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U10_Automatic%20Payment%20Program/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U10_Automatic%20Payment%20Program/Unit10_Accenture_Training_Notes.md)**: Walkthrough for Unit 10:
+    * **Assignment 1**: Configuring House Banks (`FI12`), Payment Methods (`FBZP`), and executing the Automatic Payment Program (`F110`).
+  * Contains 1 PDF assignment exercise sheet.
+
+* **[24-07-2026 (Live Session)/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/24-07-2026/)**
+  * **[Live Session Study Notes](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/24-07-2026/24-07-2026_Live_Session_Notes.md)**: Notes covering FI-MM Integration (Procure-to-Pay):
+    * **Automatic Account Determination (`OBYC`)**: Mapping Transaction Keys (`BSX`, `WRX`, `GBB`) to GL accounts based on Valuation Classes.
+    * **P2P Flow**: `ME21N` (PO) -> `MIGO` (GR) -> `MIRO` (Invoice).
+  * Contains 6 reference screenshots.
+
+
 ---
 
 ## 🚀 How to Use These Notes
@@ -143,4 +155,12 @@ Here are the critical T-codes configured during the initial training phase:
 | **`FBA2`** / **`F-29`** | Post Customer Down Payment | Post an advance payment to a Special GL indicator. | Standard Operation |
 | **`F-22`** / **`FB70`** | Enter Customer Invoice | Post standard Accounts Receivable invoices. | ⭐ **Highly Used** (Daily operation) |
 | **`FB60`** | Enter Vendor Invoice | Post standard Accounts Payable invoices. | ⭐ **Highly Used** (Daily operation) |
+| **`FBZP`** | Automatic Payment Config | Maintain all configuration rules for the Automatic Payment Program. | ⭐ **Highly Important** (Core Setup) |
+| **`F110`** | Automatic Payment Program | Execute a mass payment run to vendors/customers. | ⭐ **Highly Used** (Periodic Processing) |
+| **`FI12`** | Define House Banks | Create and manage the physical bank accounts used by the company. | Foundational (Core Setup) |
+| **`OBYC`** | MM-FI Account Determination | Configure automatic GL account mapping for materials management. | ⭐ **Highly Important** (Integration) |
+| **`ME21N`** | Create Purchase Order | Create a PO to procure materials from a vendor. | ⭐ **Highly Used** (Logistics) |
+| **`MIGO`** | Goods Movement | Post a Goods Receipt (GR) or Goods Issue (GI). | ⭐ **Highly Used** (Logistics) |
+| **`MIRO`** | Enter Incoming Invoice | Perform Invoice Verification (IR) against a Purchase Order. | ⭐ **Highly Used** (Logistics) |
+| **`MB1A`** | Goods Withdrawal | Issue goods for consumption or scrap (legacy T-Code, replaced by MIGO). | Standard Operation |
 | **`F-39`** | Clear Customer Down Payment | Clear an open down payment against a posted invoice. | Standard Operation |
