@@ -256,4 +256,94 @@ Instead of paying 500 vendors manually one-by-one (`F-53`), SAP's Automatic Paym
     4. Click **Payment Run** to execute and pay the vendor!
 
 ---
-**Congratulations!** By following these steps sequentially, you have learned exactly how a global enterprise structures its backend, protects its data, builds its masters, processes daily cashflow, and pays vendors in bulk in SAP S/4HANA.
+---
+
+## Phase 7: Dunning Program (Unit 11 Assignment)
+
+### Assignment Prompt:
+> *"Maintain the end-to-end configuration for Dunning procedure. Execution of Dunning program for configured Dunning procedure from step 1."*
+
+**Explanation for Beginners**:
+If a customer doesn't pay us on time, we need to send them a warning letter. SAP's Dunning Program automates this. We configure a "Dunning Procedure" that dictates how many days late they must be, and how many warning levels (e.g., Level 1 reminder, Level 3 legal action) exist.
+
+### Step-by-Step Configuration:
+
+**1. Define Dunning Procedures**
+*   **Path**: `SPRO > SAP Reference IMG > Financial Accounting > Accounts Receivable and Accounts Payable > Business Transactions > Dunning > Dunning Procedure > Define Dunning Procedures`
+*   **T-Code**: `FBMP`
+*   **Action**: 
+    1. Create a Dunning Procedure (e.g., `Z001`).
+    2. Define **Dunning Intervals** (e.g., send a letter every 14 days).
+    3. Define the **Number of Dunning Levels** (e.g., 3 levels).
+    4. Define **Dunning Texts**: Assign standard SAP forms (like `F150_DUNN_01`) so the system knows what the PDF letter should look like for each level.
+
+**2. Assign Dunning Procedure to Customer**
+*   **Path**: `SAP Easy Access > Accounting > Financial Accounting > Customers > Master Records > BP - Maintain Business Partner`
+*   **T-Code**: `BP`
+*   **Action**: Open Customer `BP9001` in role `FLCU00`. Go to the **Correspondence** tab and type `Z001` in the Dunning Procedure field. Save.
+
+**3. Execute Dunning Run**
+*   **Path**: `SAP Easy Access > Accounting > Financial Accounting > Accounts Receivable > Periodic Processing > F150 - Dunning`
+*   **T-Code**: `F150`
+*   **Action**: 
+    1. Enter a **Run Date** (today) and an **Identification** (e.g., `DUN1`).
+    2. Go to **Parameters**: Enter the Dunning Date, Company Code `MAK1`, and Customer `BP9001`.
+    3. Click **Dunning Printout** to execute. SAP will find all overdue invoices for `BP9001`, apply Level 1, and generate the PDF warning letter in the spooler (`SP01`).
+
+---
+
+## Phase 8: Correspondence for Customer Account (Unit 12 Assignment)
+
+### Assignment Prompt:
+> *"Check the correspondence type SAP06 provided by SAP and modify the settings... Use F.12 to create the account statement... Print the output if required in F.64"*
+
+**Explanation for Beginners**:
+Sometimes a customer asks for an Account Statement showing all their open and paid invoices. We configure a "Correspondence Type" (`SAP06`) to define what this statement looks like, request it (`F.12`), and print it (`F.64`).
+
+### Step-by-Step Configuration:
+
+**1. Configure Correspondence Type SAP06**
+*   **Path**: `SPRO > SAP Reference IMG > Financial Accounting > Accounts Receivable and Accounts Payable > Customer Accounts > Line Items > Correspondence > Make and Check Settings for Correspondence > Define Correspondence Types`
+*   **Action**: Find standard type `SAP06` (Customer Statement). Ensure the settings for mandatory date fields are correct.
+
+**2. Assign Print Programs and Forms**
+*   **Path**: `SPRO > SAP Reference IMG > Financial Accounting > Accounts Receivable and Accounts Payable > Customer Accounts > Line Items > Correspondence > Assign Programs for Correspondence Types`
+*   **Action**: Ensure program `RFKORD11` is assigned to `SAP06`. (You also link the PDF form name in the subsequent SPRO node).
+
+**3. Request the Account Statement**
+*   **Path**: `SAP Easy Access > Accounting > Financial Accounting > Accounts Receivable > Periodic Processing > Print Correspondence > F.12 - As per Requests`
+*   **T-Code**: `F.12`
+*   **Action**: Enter Company Code `MAK1`, Customer `BP9001`, and select correspondence type `SAP06`. Execute. (This tells SAP you *want* a statement, but it doesn't print it yet).
+
+**4. Print the Output**
+*   **Path**: `SAP Easy Access > Accounting > Financial Accounting > Accounts Receivable > Periodic Processing > Print Correspondence > F.64 - Maintain`
+*   **T-Code**: `F.64`
+*   **Action**: Execute the transaction to view all requested correspondence. Select your request for `BP9001` and execute the print run. This pushes the statement to the spooler (`SP01`) where you can view or print the PDF.
+
+---
+
+## Phase 9: MM and SD Integration (Unit 13 Assignment)
+
+### Assignment Prompt:
+> *"Explain MM integration. Explain SD integration."*
+
+**Explanation for Beginners**:
+SAP Financials (FI) does not operate in a vacuum. It integrates seamlessly with Logistics. When the warehouse receives goods (Materials Management - MM) or when Sales ships goods and bills a customer (Sales & Distribution - SD), the system automatically posts the journal entries to FI.
+
+### Step-by-Step Concepts:
+
+**1. MM Integration (Procure-to-Pay / P2P)**
+*   **The T-Code**: `OBYC` (Automatic Account Determination).
+*   **How it works**: When Goods Receipt (`MIGO`) happens, SAP looks at the material's **Valuation Class** and a specific **Transaction Key** to find the correct G/L account.
+    *   **BSX (Inventory Posting)**: Maps to the Inventory Asset G/L.
+    *   **WRX (GR/IR Clearing)**: Maps to the temporary Goods Receipt/Invoice Receipt liability G/L.
+*   **The Flow**: `ME21N` (PO created) -> `MIGO` (Goods Received: Debit BSX, Credit WRX) -> `MIRO` (Invoice Received: Debit WRX, Credit Vendor).
+
+**2. SD Integration (Order-to-Cash / O2C)**
+*   **The T-Code**: `VKOA` (Assign G/L Accounts for Sales and Distribution).
+*   **How it works**: When a customer is billed (`VF01`), SAP uses a combination of factors (like Sales Organization and Account Assignment Groups) to find the correct Revenue G/L account.
+    *   **ERL (Revenue)**: Maps to the Sales Revenue G/L.
+*   **The Flow**: `VA01` (Sales Order created) -> `VL01N` (Goods Issued: Debit Cost of Goods Sold, Credit Inventory) -> `VF01` (Customer Billed: Debit Customer, Credit ERL Revenue).
+
+---
+**Congratulations!** By following these steps sequentially, you have learned exactly how a global enterprise structures its backend, protects its data, builds its masters, processes daily cashflow, pays vendors in bulk, sends dunning letters, generates account statements, and integrates with the logistics modules in SAP S/4HANA.

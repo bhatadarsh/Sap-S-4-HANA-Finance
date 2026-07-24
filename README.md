@@ -102,6 +102,21 @@ The training materials are organized by day. Each folder contains the original t
     * **Assignment 1**: Configuring House Banks (`FI12`), Payment Methods (`FBZP`), and executing the Automatic Payment Program (`F110`).
   * Contains 1 PDF assignment exercise sheet.
 
+* **[SAP S4 Hana Finance_U11_Dunning Program/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U11_Dunning%20Program/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U11_Dunning%20Program/Unit11_Accenture_Training_Notes.md)**: Walkthrough for Unit 11:
+    * **Assignment 1**: Configuring Dunning Procedures and executing mass Dunning Runs (`F150`).
+  * Contains 1 PDF assignment exercise sheet.
+
+* **[SAP S4 Hana Finance_U12_Correspondence/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U12_Correspondence/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U12_Correspondence/Unit12_Accenture_Training_Notes.md)**: Walkthrough for Unit 12:
+    * **Assignment 1**: Configuring Correspondence Types (`SAP06`), requesting statements (`F.12`), and printing them (`F.64`).
+  * Contains 1 PDF assignment exercise sheet.
+
+* **[SAP S4 Hana Finance_U13_MM and SD Integration/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U13_MM%20and%20SD%20Integration/)**
+  * **[Study Notes & Configuration Guide](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/SAP%20S4%20Hana%20Finance_U13_MM%20and%20SD%20Integration/Unit13_Accenture_Training_Notes.md)**: Walkthrough for Unit 13:
+    * **Assignment 1**: Explaining the concepts behind automatic account determination for MM (`OBYC`) and SD (`VKOA`).
+  * Contains 1 PDF assignment exercise sheet.
+
 * **[24-07-2026 (Live Session)/](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/24-07-2026/)**
   * **[Live Session Study Notes](file:///c:/Users/bhata/OneDrive/Desktop/Sap%20s4%20hana%20finance/24-07-2026/24-07-2026_Live_Session_Notes.md)**: Notes covering FI-MM Integration (Procure-to-Pay):
     * **Automatic Account Determination (`OBYC`)**: Mapping Transaction Keys (`BSX`, `WRX`, `GBB`) to GL accounts based on Valuation Classes.
@@ -164,3 +179,7 @@ Here are the critical T-codes configured during the initial training phase:
 | **`MIRO`** | Enter Incoming Invoice | Perform Invoice Verification (IR) against a Purchase Order. | ⭐ **Highly Used** (Logistics) |
 | **`MB1A`** | Goods Withdrawal | Issue goods for consumption or scrap (legacy T-Code, replaced by MIGO). | Standard Operation |
 | **`F-39`** | Clear Customer Down Payment | Clear an open down payment against a posted invoice. | Standard Operation |
+| **`F150`** | Dunning Run | Generate and print dunning letters for overdue customers. | ⭐ **Highly Important** (Periodic) |
+| **`F.12`** | Request Correspondence | Request correspondence (like customer statements) in mass. | Standard Operation |
+| **`F.64`** | Maintain Correspondence | Execute and print the requested correspondence. | Standard Operation |
+| **`VKOA`** | SD-FI Account Determination | Configure automatic GL account mapping for sales and distribution. | ⭐ **Highly Important** (Integration) |
